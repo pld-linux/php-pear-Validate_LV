@@ -1,23 +1,19 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Validate
-%define		_subclass	LV
 %define		_status		stable
 %define		_pearname	Validate_LV
-
 Summary:	%{_pearname} - Validation class for Latvia
 Summary(pl.UTF-8):	%{_pearname} - klasa sprawdzająca poprawność dla Łotwy
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	8b4e87ea5fab464bcbc3bef51999aa55
 URL:		http://pear.php.net/package/Validate_LV/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
-Requires:	php-pear-PEAR >= 1.4.0b1
 Requires:	php-pear-Validate >= 0.5.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
